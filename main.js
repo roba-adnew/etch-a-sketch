@@ -4,13 +4,19 @@
 let rows = [];
 let cols = [];
 
-for (let i = 1; i < 5; i++){
+for (let i = 1; i < 9; i++){
     rows[i] = document.createElement('div');
-    rows[i].classList.add("row"+i);
+    rows[i].classList.add("row",""+i);
+    rows[i].style.cssText = 
+        'display: flex; flex-direction: row;';
     document.body.appendChild(rows[i]);   
-    for (let j = 1; j < 5; j++) {
+
+
+    for (let j = 1; j < 9; j++) {
         cols["" + i + j] = document.createElement('div');
-        cols["" + i + j].classList.add("col"+i);
+        cols["" + i + j].classList.add("grid",""+i+"x"+j);
+        cols["" + i + j].style.cssText = 
+            'flex-basis: 50px; height: 50px; border: 1px solid blue;';
         rows[i].appendChild(cols["" + i + j]);
     }
 }   
