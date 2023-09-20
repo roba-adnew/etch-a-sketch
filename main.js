@@ -21,7 +21,7 @@ function createGrid (size = 25) {
             cols["" + i + j].setAttribute("id","cell-"+(i+1)+"x"+(j+1));
             cols["" + i + j].style.cssText = 
                 "flex-basis: " + cellSize + "px; height: " + 
-                cellSize + "px; border: 1px solid blue;";
+                cellSize + "px; border: 0.1px solid blue;";
             rows[i].appendChild(cols["" + i + j]);
         }
     }   
